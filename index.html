@@ -1,9 +1,1917 @@
-<!DOCKTYPE>
-head</web.>
-det;
-Ba control 
-colour:
-Zambian green fill and black 
-if@tapped then; true
-if@## take site[soul]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BA Control – Zambia's #1 Free Music Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #198038;
+  --green-light: #24a84d;
+  --green-glow: #2ecc71;
+  --green-dark: #0e4f22;
+  --green-deep: #092b13;
+  --black: #050d07;
+  --black2: #0a1a0d;
+  --black3: #111f14;
+  --card: #0d1f10;
+  --card2: #112514;
+  --border: #1a3d20;
+  --text: #e8f5eb;
+  --text2: #a8d4b0;
+  --text3: #5a8f62;
+  --gold: #f0c040;
+  --red: #e74c3c;
+  --white: #ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--black);
+  color:var(--text);
+  font-family:'Exo 2',sans-serif;
+  overflow-x:hidden;
+  min-height:100vh;
+}
 
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:var(--black2);}
+::-webkit-scrollbar-thumb{background:var(--green);border-radius:3px;}
+
+/* ===== ANIMATED BG ===== */
+body::before{
+  content:'';position:fixed;top:0;left:0;width:100%;height:100%;
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(25,128,56,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(25,128,56,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(9,43,19,0.9) 0%, var(--black) 100%);
+  pointer-events:none;z-index:0;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(5,13,7,0.95);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  padding:0 24px;
+}
+.header-inner{
+  max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  height:70px;gap:16px;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;text-decoration:none;
+  flex-shrink:0;
+}
+.logo-icon{
+  width:44px;height:44px;border-radius:10px;
+  background:linear-gradient(135deg,var(--green),var(--green-dark));
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-family:'Bebas Neue',sans-serif;
+  color:#fff;letter-spacing:1px;
+  box-shadow:0 0 20px rgba(25,128,56,0.5);
+  border:1px solid var(--green-light);
+}
+.logo-text{
+  display:flex;flex-direction:column;line-height:1;
+}
+.logo-name{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:26px;letter-spacing:3px;
+  color:var(--green-glow);
+  text-shadow:0 0 15px rgba(46,204,113,0.4);
+}
+.logo-sub{
+  font-size:9px;letter-spacing:2px;color:var(--text3);
+  font-family:'Rajdhani',sans-serif;font-weight:600;
+  text-transform:uppercase;
+}
+.header-search{
+  flex:1;max-width:500px;position:relative;
+}
+.header-search input{
+  width:100%;padding:10px 46px 10px 18px;
+  background:var(--black3);border:1px solid var(--border);
+  border-radius:30px;color:var(--text);
+  font-family:'Exo 2',sans-serif;font-size:14px;
+  outline:none;transition:all .3s;
+}
+.header-search input:focus{border-color:var(--green);box-shadow:0 0 15px rgba(25,128,56,0.2);}
+.header-search input::placeholder{color:var(--text3);}
+.header-search .search-btn{
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:var(--green);cursor:pointer;font-size:16px;
+}
+.header-actions{display:flex;align-items:center;gap:10px;}
+.btn{
+  padding:9px 20px;border-radius:8px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:14px;letter-spacing:1px;cursor:pointer;
+  border:none;transition:all .25s;text-transform:uppercase;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--green),var(--green-dark));
+  color:#fff;box-shadow:0 4px 15px rgba(25,128,56,0.3);
+}
+.btn-primary:hover{
+  background:linear-gradient(135deg,var(--green-light),var(--green));
+  box-shadow:0 6px 25px rgba(25,128,56,0.5);transform:translateY(-1px);
+}
+.btn-outline{
+  background:transparent;color:var(--green-glow);
+  border:1px solid var(--green);
+}
+.btn-outline:hover{background:rgba(25,128,56,0.1);box-shadow:0 0 15px rgba(25,128,56,0.2);}
+.upload-btn{
+  padding:9px 18px;
+  background:linear-gradient(135deg,var(--green-dark),var(--green));
+  border:1px solid var(--green-light);
+  color:#fff;border-radius:8px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:13px;letter-spacing:1px;cursor:pointer;
+  transition:all .25s;text-transform:uppercase;
+  display:flex;align-items:center;gap:6px;
+}
+.upload-btn:hover{box-shadow:0 0 20px rgba(46,204,113,0.4);transform:translateY(-1px);}
+
+/* ===== NAV TABS ===== */
+.nav-tabs{
+  background:var(--black2);
+  border-bottom:1px solid var(--border);
+  padding:0 24px;
+  position:sticky;top:70px;z-index:999;
+}
+.nav-tabs-inner{
+  max-width:1400px;margin:0 auto;
+  display:flex;gap:4px;overflow-x:auto;
+  scrollbar-width:none;
+}
+.nav-tabs-inner::-webkit-scrollbar{display:none;}
+.nav-tab{
+  padding:14px 20px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--text3);border:none;background:none;cursor:pointer;
+  white-space:nowrap;position:relative;transition:all .25s;
+}
+.nav-tab::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:var(--green-glow);border-radius:2px 2px 0 0;
+  transform:scaleX(0);transition:transform .25s;
+}
+.nav-tab.active{color:var(--green-glow);}
+.nav-tab.active::after{transform:scaleX(1);}
+.nav-tab:hover{color:var(--text);}
+
+/* ===== HERO BANNER ===== */
+.hero{
+  max-width:1400px;margin:0 auto;
+  padding:40px 24px 20px;position:relative;z-index:1;
+}
+.hero-banner{
+  background:linear-gradient(135deg,var(--green-deep) 0%,var(--black3) 40%,var(--black2) 100%);
+  border:1px solid var(--border);border-radius:20px;
+  padding:50px 60px;
+  display:flex;align-items:center;justify-content:space-between;gap:40px;
+  overflow:hidden;position:relative;
+}
+.hero-banner::before{
+  content:'';position:absolute;top:-50%;right:-10%;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(25,128,56,0.15) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-banner::after{
+  content:'♪';position:absolute;right:60px;top:50%;transform:translateY(-50%);
+  font-size:200px;color:rgba(25,128,56,0.06);
+  pointer-events:none;line-height:1;
+}
+.hero-text{}
+.hero-badge{
+  display:inline-block;
+  background:linear-gradient(90deg,var(--green-dark),rgba(25,128,56,0.3));
+  border:1px solid var(--green);
+  border-radius:30px;padding:5px 16px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:11px;letter-spacing:2px;color:var(--green-glow);
+  text-transform:uppercase;margin-bottom:16px;
+}
+.hero-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(36px,5vw,72px);
+  line-height:.95;color:#fff;
+  text-shadow:0 0 40px rgba(25,128,56,0.3);
+  margin-bottom:16px;
+}
+.hero-title span{color:var(--green-glow);}
+.hero-desc{
+  font-size:15px;color:var(--text2);line-height:1.7;
+  max-width:520px;margin-bottom:28px;
+  font-weight:300;
+}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
+.hero-tag{
+  background:rgba(25,128,56,0.15);border:1px solid rgba(25,128,56,0.4);
+  border-radius:20px;padding:4px 12px;
+  font-size:11px;font-family:'Rajdhani',sans-serif;
+  font-weight:600;letter-spacing:1px;color:var(--green-glow);
+}
+.hero-stats{display:flex;gap:32px;}
+.hero-stat{text-align:center;}
+.hero-stat-num{
+  font-family:'Bebas Neue',sans-serif;font-size:32px;
+  color:var(--green-glow);display:block;line-height:1;
+}
+.hero-stat-label{font-size:11px;color:var(--text3);letter-spacing:1px;font-family:'Rajdhani',sans-serif;}
+
+/* ===== SECTION ===== */
+.section{
+  max-width:1400px;margin:0 auto;
+  padding:32px 24px;position:relative;z-index:1;
+}
+.section-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:20px;
+}
+.section-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:28px;letter-spacing:2px;
+  color:var(--text);display:flex;align-items:center;gap:10px;
+}
+.section-title span{color:var(--green-glow);}
+.section-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--green-glow);
+  box-shadow:0 0 8px var(--green-glow);
+}
+.see-all{
+  font-family:'Rajdhani',sans-serif;font-weight:600;
+  font-size:13px;letter-spacing:1px;color:var(--green-light);
+  cursor:pointer;background:none;border:none;
+  text-transform:uppercase;transition:color .2s;
+}
+.see-all:hover{color:var(--green-glow);}
+
+/* ===== MUSIC GRID ===== */
+.music-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:16px;
+}
+.music-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;
+  cursor:pointer;transition:all .3s;
+  position:relative;
+}
+.music-card:hover{
+  border-color:var(--green);
+  box-shadow:0 8px 30px rgba(25,128,56,0.2);
+  transform:translateY(-4px);
+}
+.music-card-cover{
+  width:100%;aspect-ratio:1;
+  object-fit:cover;
+  background:linear-gradient(135deg,var(--green-dark),var(--black3));
+  display:flex;align-items:center;justify-content:center;
+  font-size:48px;position:relative;overflow:hidden;
+}
+.music-card-cover img{width:100%;height:100%;object-fit:cover;}
+.cover-placeholder{
+  width:100%;aspect-ratio:1;
+  display:flex;align-items:center;justify-content:center;
+  font-size:48px;
+  background:linear-gradient(135deg,var(--green-dark) 0%,var(--black3) 100%);
+  position:relative;overflow:hidden;
+}
+.cover-placeholder::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 30%,rgba(46,204,113,0.2),transparent 60%);
+}
+.music-card-overlay{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,0.6);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  opacity:0;transition:opacity .3s;
+}
+.music-card:hover .music-card-overlay{opacity:1;}
+.play-btn-overlay{
+  width:50px;height:50px;border-radius:50%;
+  background:var(--green);border:none;
+  color:#fff;font-size:20px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;box-shadow:0 0 20px rgba(25,128,56,0.6);
+}
+.play-btn-overlay:hover{transform:scale(1.1);background:var(--green-light);}
+.dl-btn-overlay{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(0,0,0,0.7);border:1px solid var(--border);
+  color:var(--text2);font-size:16px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.dl-btn-overlay:hover{background:var(--green-dark);border-color:var(--green);color:#fff;}
+.music-card-info{padding:12px;}
+.music-card-title{
+  font-weight:700;font-size:14px;color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  margin-bottom:4px;
+}
+.music-card-artist{
+  font-size:12px;color:var(--text3);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.music-card-meta{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:8px;
+}
+.music-card-genre{
+  font-size:10px;letter-spacing:1px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  background:rgba(25,128,56,0.2);
+  border:1px solid rgba(25,128,56,0.4);
+  border-radius:10px;padding:2px 8px;color:var(--green-glow);
+}
+.music-card-plays{font-size:11px;color:var(--text3);}
+.music-card-new{
+  position:absolute;top:8px;left:8px;
+  background:var(--green);color:#fff;
+  font-size:9px;font-family:'Rajdhani',sans-serif;font-weight:700;
+  letter-spacing:1px;padding:2px 8px;border-radius:10px;
+  text-transform:uppercase;
+}
+.music-card-hot{
+  position:absolute;top:8px;left:8px;
+  background:var(--gold);color:var(--black);
+  font-size:9px;font-family:'Rajdhani',sans-serif;font-weight:700;
+  letter-spacing:1px;padding:2px 8px;border-radius:10px;
+  text-transform:uppercase;
+}
+
+/* ===== TRACK LIST ===== */
+.track-list{display:flex;flex-direction:column;gap:4px;}
+.track-item{
+  display:flex;align-items:center;gap:14px;
+  padding:12px 16px;border-radius:10px;
+  background:var(--card);border:1px solid transparent;
+  cursor:pointer;transition:all .25s;
+}
+.track-item:hover,.track-item.playing{
+  background:var(--card2);border-color:var(--border);
+  box-shadow:0 2px 15px rgba(25,128,56,0.1);
+}
+.track-item.playing .track-num{color:var(--green-glow);}
+.track-num{
+  width:28px;text-align:center;
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:14px;color:var(--text3);flex-shrink:0;
+}
+.track-cover-sm{
+  width:48px;height:48px;border-radius:8px;
+  object-fit:cover;flex-shrink:0;overflow:hidden;
+  background:linear-gradient(135deg,var(--green-dark),var(--black3));
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+}
+.track-cover-sm img{width:100%;height:100%;object-fit:cover;}
+.track-info{flex:1;min-width:0;}
+.track-title{
+  font-weight:600;font-size:14px;color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  margin-bottom:2px;
+}
+.track-artist{font-size:12px;color:var(--text3);}
+.track-genre{
+  font-size:10px;font-family:'Rajdhani',sans-serif;font-weight:700;
+  letter-spacing:1px;color:var(--text3);flex-shrink:0;
+  display:none;
+}
+.track-duration{
+  font-size:13px;color:var(--text3);flex-shrink:0;
+  font-family:'Rajdhani',sans-serif;
+}
+.track-actions{display:flex;gap:6px;flex-shrink:0;}
+.track-action-btn{
+  width:32px;height:32px;border-radius:8px;
+  background:none;border:1px solid var(--border);
+  color:var(--text3);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;transition:all .2s;
+}
+.track-action-btn:hover{background:var(--green-dark);border-color:var(--green);color:var(--green-glow);}
+.track-play-btn{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--green);border:none;
+  color:#fff;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;flex-shrink:0;transition:all .2s;
+}
+.track-play-btn:hover{background:var(--green-light);box-shadow:0 0 15px rgba(25,128,56,0.5);}
+
+/* ===== GENRE PILLS ===== */
+.genre-bar{
+  display:flex;gap:8px;overflow-x:auto;
+  padding-bottom:4px;margin-bottom:24px;
+  scrollbar-width:none;
+}
+.genre-bar::-webkit-scrollbar{display:none;}
+.genre-pill{
+  padding:8px 20px;border-radius:30px;
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:12px;letter-spacing:1px;
+  white-space:nowrap;cursor:pointer;
+  background:var(--card);border:1px solid var(--border);
+  color:var(--text2);transition:all .25s;text-transform:uppercase;
+}
+.genre-pill:hover,.genre-pill.active{
+  background:var(--green-dark);border-color:var(--green);
+  color:var(--green-glow);box-shadow:0 0 12px rgba(25,128,56,0.2);
+}
+
+/* ===== PLAYER BAR ===== */
+#playerBar{
+  position:fixed;bottom:0;left:0;right:0;z-index:2000;
+  background:rgba(5,13,7,0.97);
+  backdrop-filter:blur(30px);
+  border-top:1px solid var(--border);
+  padding:0 24px;
+  transform:translateY(100%);transition:transform .4s cubic-bezier(.4,0,.2,1);
+}
+#playerBar.visible{transform:translateY(0);}
+.player-inner{
+  max-width:1400px;margin:0 auto;
+  display:flex;align-items:center;gap:20px;height:80px;
+}
+.player-track{
+  display:flex;align-items:center;gap:12px;
+  flex:0 0 260px;min-width:0;
+}
+.player-cover{
+  width:52px;height:52px;border-radius:8px;
+  background:linear-gradient(135deg,var(--green-dark),var(--black3));
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;flex-shrink:0;overflow:hidden;
+  border:1px solid var(--border);
+}
+.player-cover img{width:100%;height:100%;object-fit:cover;}
+.player-track-info{min-width:0;}
+.player-title{
+  font-weight:700;font-size:14px;color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  margin-bottom:2px;
+}
+.player-artist{font-size:12px;color:var(--text3);}
+.player-heart{
+  background:none;border:none;color:var(--text3);
+  cursor:pointer;font-size:18px;transition:all .2s;
+  flex-shrink:0;
+}
+.player-heart.liked{color:var(--red);}
+.player-heart:hover{transform:scale(1.2);}
+
+.player-controls{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  flex:1;
+}
+.player-btns{display:flex;align-items:center;gap:12px;}
+.ctrl-btn{
+  width:36px;height:36px;border-radius:50%;
+  background:none;border:none;
+  color:var(--text3);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;transition:all .2s;
+}
+.ctrl-btn:hover{color:var(--text);background:var(--card);}
+.ctrl-btn.active{color:var(--green-glow);}
+.play-pause-btn{
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--green-light),var(--green));
+  border:none;color:#fff;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;transition:all .2s;
+  box-shadow:0 0 20px rgba(25,128,56,0.4);
+}
+.play-pause-btn:hover{
+  background:linear-gradient(135deg,var(--green-glow),var(--green-light));
+  box-shadow:0 0 30px rgba(46,204,113,0.5);transform:scale(1.05);
+}
+.player-progress{
+  width:100%;display:flex;align-items:center;gap:10px;
+}
+.progress-time{
+  font-size:11px;color:var(--text3);
+  font-family:'Rajdhani',sans-serif;flex-shrink:0;min-width:35px;
+  text-align:center;
+}
+.progress-bar{
+  flex:1;height:4px;border-radius:2px;
+  background:var(--black3);cursor:pointer;position:relative;
+}
+.progress-fill{
+  height:100%;border-radius:2px;
+  background:linear-gradient(90deg,var(--green),var(--green-glow));
+  width:0%;position:relative;transition:width .1s;pointer-events:none;
+}
+.progress-fill::after{
+  content:'';position:absolute;right:-6px;top:50%;transform:translateY(-50%);
+  width:12px;height:12px;border-radius:50%;
+  background:var(--green-glow);
+  box-shadow:0 0 8px var(--green-glow);
+}
+
+.player-extra{
+  display:flex;align-items:center;gap:12px;
+  flex:0 0 200px;justify-content:flex-end;
+}
+.volume-wrap{display:flex;align-items:center;gap:8px;}
+.volume-icon{font-size:16px;color:var(--text3);}
+.volume-slider{
+  -webkit-appearance:none;
+  width:80px;height:4px;border-radius:2px;
+  background:var(--black3);cursor:pointer;
+  outline:none;
+}
+.volume-slider::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--green-glow);cursor:pointer;
+}
+.dl-player-btn{
+  background:none;border:1px solid var(--border);
+  border-radius:8px;padding:6px 14px;
+  color:var(--text2);cursor:pointer;
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:12px;letter-spacing:1px;
+  display:flex;align-items:center;gap:5px;
+  transition:all .2s;
+}
+.dl-player-btn:hover{background:var(--green-dark);border-color:var(--green);color:var(--green-glow);}
+
+/* ===== UPLOAD MODAL ===== */
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:3000;
+  background:rgba(0,0,0,0.85);backdrop-filter:blur(10px);
+  align-items:center;justify-content:center;padding:20px;
+}
+.modal-overlay.open{display:flex;}
+.modal{
+  background:var(--black2);
+  border:1px solid var(--border);border-radius:20px;
+  width:100%;max-width:620px;max-height:90vh;overflow-y:auto;
+  padding:32px;position:relative;
+  animation:modalIn .3s ease;
+}
+@keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(.97);}to{opacity:1;transform:none;}}
+.modal-close{
+  position:absolute;top:20px;right:20px;
+  width:32px;height:32px;border-radius:8px;
+  background:var(--card);border:1px solid var(--border);
+  color:var(--text2);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;transition:all .2s;
+}
+.modal-close:hover{background:var(--red);border-color:var(--red);color:#fff;}
+.modal-title{
+  font-family:'Bebas Neue',sans-serif;font-size:30px;
+  letter-spacing:2px;color:var(--text);margin-bottom:6px;
+}
+.modal-subtitle{font-size:13px;color:var(--text3);margin-bottom:24px;}
+.upload-zone{
+  border:2px dashed var(--border);border-radius:14px;
+  padding:40px;text-align:center;
+  background:var(--card);cursor:pointer;
+  transition:all .3s;margin-bottom:20px;
+}
+.upload-zone:hover,.upload-zone.dragover{
+  border-color:var(--green);background:rgba(25,128,56,0.05);
+}
+.upload-zone-icon{font-size:40px;margin-bottom:10px;display:block;}
+.upload-zone-text{font-size:15px;color:var(--text2);font-weight:600;}
+.upload-zone-sub{font-size:12px;color:var(--text3);margin-top:4px;}
+.upload-zone input[type=file]{display:none;}
+.form-group{margin-bottom:16px;}
+.form-label{
+  display:block;font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:12px;letter-spacing:1.5px;color:var(--text3);
+  text-transform:uppercase;margin-bottom:6px;
+}
+.form-input{
+  width:100%;padding:11px 16px;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:10px;color:var(--text);
+  font-family:'Exo 2',sans-serif;font-size:14px;
+  outline:none;transition:all .3s;
+}
+.form-input:focus{border-color:var(--green);box-shadow:0 0 12px rgba(25,128,56,0.15);}
+.form-input::placeholder{color:var(--text3);}
+.form-select{
+  width:100%;padding:11px 16px;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:10px;color:var(--text);
+  font-family:'Exo 2',sans-serif;font-size:14px;
+  outline:none;transition:all .3s;cursor:pointer;
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 7L11 1' stroke='%235a8f62' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;
+  background-color:var(--card);
+}
+.form-select:focus{border-color:var(--green);}
+.form-select option{background:var(--black2);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.cover-upload{
+  width:100%;aspect-ratio:1;max-width:120px;
+  border:2px dashed var(--border);border-radius:12px;
+  background:var(--card);cursor:pointer;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;transition:all .3s;overflow:hidden;
+}
+.cover-upload:hover{border-color:var(--green);background:rgba(25,128,56,0.05);}
+.cover-upload img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
+.cover-upload-label{font-size:10px;color:var(--text3);letter-spacing:1px;font-family:'Rajdhani',sans-serif;}
+.cover-upload input{display:none;}
+.upload-progress{
+  background:var(--card);border-radius:10px;
+  padding:14px 16px;margin-top:16px;display:none;
+}
+.upload-progress.active{display:block;}
+.upload-progress-bar{
+  height:4px;background:var(--black3);border-radius:2px;overflow:hidden;
+}
+.upload-progress-fill{
+  height:100%;background:linear-gradient(90deg,var(--green),var(--green-glow));
+  width:0%;transition:width .3s;border-radius:2px;
+}
+.upload-submit{
+  width:100%;padding:14px;margin-top:4px;
+  background:linear-gradient(135deg,var(--green),var(--green-dark));
+  border:none;border-radius:12px;color:#fff;
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:16px;letter-spacing:2px;text-transform:uppercase;
+  cursor:pointer;transition:all .3s;
+}
+.upload-submit:hover{
+  background:linear-gradient(135deg,var(--green-light),var(--green));
+  box-shadow:0 6px 25px rgba(25,128,56,0.4);transform:translateY(-1px);
+}
+
+/* ===== TOAST ===== */
+.toast-container{
+  position:fixed;top:90px;right:24px;z-index:5000;
+  display:flex;flex-direction:column;gap:8px;
+}
+.toast{
+  background:var(--black2);border:1px solid var(--border);
+  border-radius:12px;padding:12px 18px;
+  font-size:13px;color:var(--text);
+  box-shadow:0 4px 20px rgba(0,0,0,0.4);
+  animation:toastIn .3s ease;
+  display:flex;align-items:center;gap:10px;
+  min-width:240px;max-width:320px;
+}
+.toast.success{border-color:var(--green);}
+.toast.success .toast-icon{color:var(--green-glow);}
+.toast.error{border-color:var(--red);}
+.toast.error .toast-icon{color:var(--red);}
+.toast-icon{font-size:16px;}
+@keyframes toastIn{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:none;}}
+
+/* ===== FEATURED ARTIST ===== */
+.artists-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:14px;
+}
+.artist-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:20px 16px;
+  text-align:center;cursor:pointer;transition:all .3s;
+}
+.artist-card:hover{
+  border-color:var(--green);
+  box-shadow:0 6px 20px rgba(25,128,56,0.15);
+  transform:translateY(-3px);
+}
+.artist-avatar{
+  width:70px;height:70px;border-radius:50%;
+  background:linear-gradient(135deg,var(--green-dark),var(--black3));
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;margin:0 auto 10px;
+  border:2px solid var(--border);
+  box-shadow:0 0 15px rgba(25,128,56,0.15);
+}
+.artist-name{
+  font-weight:700;font-size:14px;color:var(--text);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.artist-count{font-size:11px;color:var(--text3);margin-top:3px;}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--black2);border-top:1px solid var(--border);
+  padding:48px 24px 24px;margin-top:60px;
+  position:relative;z-index:1;
+}
+.footer-inner{
+  max-width:1400px;margin:0 auto;
+}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;margin-bottom:40px;
+}
+.footer-brand p{
+  font-size:13px;color:var(--text3);line-height:1.7;
+  margin:12px 0 16px;max-width:300px;
+}
+.footer-social{display:flex;gap:10px;}
+.social-btn{
+  width:36px;height:36px;border-radius:8px;
+  background:var(--card);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;cursor:pointer;transition:all .2s;color:var(--text2);
+  text-decoration:none;
+}
+.social-btn:hover{background:var(--green-dark);border-color:var(--green);color:var(--green-glow);}
+.footer-col-title{
+  font-family:'Bebas Neue',sans-serif;font-size:16px;
+  letter-spacing:2px;color:var(--text);margin-bottom:14px;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.footer-col ul li a{
+  font-size:13px;color:var(--text3);text-decoration:none;
+  transition:color .2s;cursor:pointer;
+}
+.footer-col ul li a:hover{color:var(--green-glow);}
+.footer-bottom{
+  border-top:1px solid var(--border);padding-top:20px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:10px;
+}
+.footer-copy{font-size:12px;color:var(--text3);}
+.footer-copy span{color:var(--green-glow);}
+.footer-made{font-size:12px;color:var(--text3);}
+.footer-made strong{color:var(--green-glow);}
+
+/* ===== EQUALIZER ANIM ===== */
+.eq{display:flex;align-items:flex-end;gap:2px;height:16px;}
+.eq-bar{
+  width:3px;border-radius:2px;
+  background:var(--green-glow);
+  animation:eq-bounce .6s ease-in-out infinite alternate;
+}
+.eq-bar:nth-child(1){height:6px;animation-delay:0s;}
+.eq-bar:nth-child(2){height:12px;animation-delay:.15s;}
+.eq-bar:nth-child(3){height:8px;animation-delay:.3s;}
+.eq-bar:nth-child(4){height:14px;animation-delay:.1s;}
+.eq-bar:nth-child(5){height:5px;animation-delay:.25s;}
+@keyframes eq-bounce{
+  from{transform:scaleY(.3);}
+  to{transform:scaleY(1);}
+}
+.eq.paused .eq-bar{animation-play-state:paused;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .hero-banner{padding:32px 28px;flex-direction:column;}
+  .hero-banner::after{display:none;}
+  .hero-stats{flex-wrap:wrap;gap:20px;}
+  .track-genre{display:none;}
+  .player-extra{flex:0 0 auto;}
+  .volume-wrap{display:none;}
+}
+@media(max-width:600px){
+  .header-search{display:none;}
+  .music-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
+  .player-inner{gap:12px;height:70px;}
+  .player-track{flex:0 0 180px;}
+  .footer-top{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+}
+
+/* ===== PAGE VIEWS ===== */
+.page{display:none;}
+.page.active{display:block;}
+
+/* ===== LIKED / QUEUE TAB ===== */
+.empty-state{
+  text-align:center;padding:60px 20px;
+  color:var(--text3);
+}
+.empty-state .empty-icon{font-size:48px;margin-bottom:12px;display:block;opacity:.4;}
+.empty-state p{font-size:14px;}
+
+/* ===== MARQUEE ===== */
+.marquee-wrap{
+  overflow:hidden;background:var(--green-dark);
+  border-top:1px solid var(--green);
+  border-bottom:1px solid var(--green);
+  padding:10px 0;margin-bottom:0;
+}
+.marquee-inner{
+  display:flex;gap:60px;width:max-content;
+  animation:marquee 30s linear infinite;
+}
+.marquee-inner:hover{animation-play-state:paused;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}  }
+.marquee-item{
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:12px;letter-spacing:2px;color:var(--green-glow);
+  white-space:nowrap;text-transform:uppercase;
+  display:flex;align-items:center;gap:10px;
+}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--green-glow);}
+</style>
+</head>
+<body>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#" onclick="showPage('home')">
+      <div class="logo-icon">BA</div>
+      <div class="logo-text">
+        <span class="logo-name">BA Control</span>
+        <span class="logo-sub">🇿🇲 Zambia's Free Music Hub</span>
+      </div>
+    </a>
+    <div class="header-search">
+      <input type="text" id="searchInput" placeholder="Search songs, artists, genres…" oninput="handleSearch(this.value)">
+      <button class="search-btn" onclick="handleSearch(document.getElementById('searchInput').value)">🔍</button>
+    </div>
+    <div class="header-actions">
+      <button class="upload-btn" onclick="openUpload()">⬆ Upload Music</button>
+    </div>
+  </div>
+</header>
+
+<!-- NAV TABS -->
+<nav class="nav-tabs">
+  <div class="nav-tabs-inner">
+    <button class="nav-tab active" onclick="showPage('home',this)">🏠 Home</button>
+    <button class="nav-tab" onclick="showPage('trending',this)">🔥 Trending</button>
+    <button class="nav-tab" onclick="showPage('newreleases',this)">✨ New Releases</button>
+    <button class="nav-tab" onclick="showPage('artists',this)">🎤 Artists</button>
+    <button class="nav-tab" onclick="showPage('genres',this)">🎵 Genres</button>
+    <button class="nav-tab" onclick="showPage('liked',this)">❤ Liked</button>
+    <button class="nav-tab" onclick="showPage('downloads',this)">⬇ Downloads</button>
+    <button class="nav-tab" onclick="showPage('queue',this)">📋 Queue</button>
+  </div>
+</nav>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner" id="marqueeInner">
+    <div class="marquee-item"><span class="marquee-dot"></span> #1 Free Music Platform in Zambia</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Made by Augustine</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> 100% Free – No Ads, No Limits</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Upload Your Music & Share With Zambia</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Stream & Download Zambian Hits</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Zed Music First – Always</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> #1 Free Music Platform in Zambia</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Made by Augustine</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> 100% Free – No Ads, No Limits</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Upload Your Music & Share With Zambia</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Stream & Download Zambian Hits</div>
+    <div class="marquee-item"><span class="marquee-dot"></span> Zed Music First – Always</div>
+  </div>
+</div>
+
+<!-- ===== HOME PAGE ===== -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-banner">
+      <div class="hero-text">
+        <div class="hero-badge">🇿🇲 Zambia's #1 Music Platform</div>
+        <h1 class="hero-title">The <span>Loudest</span><br>Stage in Zambia</h1>
+        <p class="hero-desc">BA Control is the most powerful free music platform built for Zambia. Stream unlimited songs, discover local artists, upload your own music, and download your favorites — all completely free, forever. No login, no fees, no limits.</p>
+        <div class="hero-tags">
+          <span class="hero-tag">🏆 Best Music App in Zambia</span>
+          <span class="hero-tag">⚡ 100% Free Forever</span>
+          <span class="hero-tag">🎵 Local & International</span>
+          <span class="hero-tag">📲 Built for Zambia</span>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button class="btn btn-primary" onclick="openUpload()">⬆ Upload Your Music</button>
+          <button class="btn btn-outline" onclick="showPage('trending', document.querySelector('.nav-tab:nth-child(2))'))">🔥 Explore Trending</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="hero-stat-num" id="statSongs">0</span><span class="hero-stat-label">Songs</span></div>
+        <div class="hero-stat"><span class="hero-stat-num" id="statArtists">0</span><span class="hero-stat-label">Artists</span></div>
+        <div class="hero-stat"><span class="hero-stat-num">∞</span><span class="hero-stat-label">Free</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GENRE FILTER -->
+  <div class="section">
+    <div class="genre-bar" id="homeGenreBar">
+      <button class="genre-pill active" onclick="filterByGenre('All',this)">All</button>
+      <button class="genre-pill" onclick="filterByGenre('Zambian',this)">🇿🇲 Zambian</button>
+      <button class="genre-pill" onclick="filterByGenre('Afrobeats',this)">Afrobeats</button>
+      <button class="genre-pill" onclick="filterByGenre('Gospel',this)">Gospel</button>
+      <button class="genre-pill" onclick="filterByGenre('Hip Hop',this)">Hip Hop</button>
+      <button class="genre-pill" onclick="filterByGenre('R&B',this)">R&B</button>
+      <button class="genre-pill" onclick="filterByGenre('Dancehall',this)">Dancehall</button>
+      <button class="genre-pill" onclick="filterByGenre('Amapiano',this)">Amapiano</button>
+      <button class="genre-pill" onclick="filterByGenre('Kalindula',this)">Kalindula</button>
+      <button class="genre-pill" onclick="filterByGenre('Pop',this)">Pop</button>
+      <button class="genre-pill" onclick="filterByGenre('Traditional',this)">Traditional</button>
+    </div>
+
+    <!-- FEATURED -->
+    <div class="section-header">
+      <div class="section-title"><div class="section-dot"></div> Featured <span>Tracks</span></div>
+      <button class="see-all" onclick="showPage('trending',document.querySelectorAll('.nav-tab')[1])">See All →</button>
+    </div>
+    <div class="music-grid" id="featuredGrid"></div>
+  </div>
+
+  <!-- TOP TRACKS LIST -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title"><div class="section-dot"></div> Top <span>Zambian</span> Hits</div>
+    </div>
+    <div class="track-list" id="topTracksList"></div>
+  </div>
+
+  <!-- FEATURED ARTISTS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title"><div class="section-dot"></div> Featured <span>Artists</span></div>
+      <button class="see-all" onclick="showPage('artists',document.querySelectorAll('.nav-tab')[3])">See All →</button>
+    </div>
+    <div class="artists-grid" id="artistsGrid"></div>
+  </div>
+
+</div>
+
+<!-- ===== TRENDING PAGE ===== -->
+<div id="page-trending" class="page">
+  <div class="section">
+    <div class="hero-banner" style="margin-bottom:28px;">
+      <div>
+        <div class="hero-badge">🔥 Real-Time</div>
+        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:2px;color:#fff;">Trending <span style="color:var(--green-glow);">Right Now</span></h2>
+        <p style="color:var(--text2);font-size:14px;margin-top:8px;">The hottest tracks being played across Zambia today</p>
+      </div>
+    </div>
+    <div class="track-list" id="trendingList"></div>
+  </div>
+</div>
+
+<!-- ===== NEW RELEASES PAGE ===== -->
+<div id="page-newreleases" class="page">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title"><div class="section-dot"></div> ✨ New <span>Releases</span></div>
+    </div>
+    <div class="music-grid" id="newReleasesGrid"></div>
+  </div>
+</div>
+
+<!-- ===== ARTISTS PAGE ===== -->
+<div id="page-artists" class="page">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title"><div class="section-dot"></div> 🎤 All <span>Artists</span></div>
+    </div>
+    <div class="artists-grid" id="allArtistsGrid"></div>
+  </div>
+  <div class="section" id="artistTracksSection" style="display:none;">
+    <div class="section-header">
+      <div class="section-title" id="artistTracksTitle"></div>
+      <button class="see-all" onclick="document.getElementById('artistTracksSection').style.display='none'">✕ Close</button>
+    </div>
+    <div class="track-list" id="artistTracksList"></div>
+  </div>
+</div>
+
+<!-- ===== GENRES PAGE ===== -->
+<div id="page-genres" class="page">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title"><div class="section-dot"></div> 🎵 Browse by <span>Genre</span></div>
+    </div>
+    <div id="genresContent"></div>
+  </div>
+</div>
+
+<!-- ===== LIKED PAGE ===== -->
+<div id="page-liked" class="page">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title"><div class="section-dot"></div> ❤ Liked <span>Songs</span></div>
+    </div>
+    <div id="likedList" class="track-list"></div>
+  </div>
+</div>
+
+<!-- ===== DOWNLOADS PAGE ===== -->
+<div id="page-downloads" class="page">
+  <div class="section">
+    <div class="hero-badge" style="margin-bottom:20px;display:inline-block;">📥 Your Downloads</div>
+    <div class="section-header">
+      <div class="section-title"><div class="section-dot"></div> Downloaded <span>Music</span></div>
+      <button class="see-all" onclick="clearDownloads()">Clear All</button>
+    </div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:20px;">Music you've downloaded is saved to your device via your browser. Tap ⬇ on any song to download.</p>
+    <div id="downloadsList" class="track-list"></div>
+  </div>
+</div>
+
+<!-- ===== QUEUE PAGE ===== -->
+<div id="page-queue" class="page">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-title"><div class="section-dot"></div> 📋 Play <span>Queue</span></div>
+      <button class="see-all" onclick="clearQueue()">Clear Queue</button>
+    </div>
+    <div id="queueList" class="track-list"></div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">BA</div>
+          <div class="logo-text">
+            <span class="logo-name">BA Control</span>
+            <span class="logo-sub">🇿🇲 Zambia's Free Music Hub</span>
+          </div>
+        </div>
+        <p>BA Control is the most powerful free music platform built for Zambia. Discover, stream, upload, and download music from the best Zambian artists and beyond. No login. No fees. Pure music.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="#" title="Facebook">f</a>
+          <a class="social-btn" href="#" title="Twitter">𝕏</a>
+          <a class="social-btn" href="#" title="Instagram">📸</a>
+          <a class="social-btn" href="#" title="WhatsApp">💬</a>
+          <a class="social-btn" href="#" title="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Discover</div>
+        <ul>
+          <li><a onclick="showPage('trending',document.querySelectorAll('.nav-tab')[1])">Trending Music</a></li>
+          <li><a onclick="showPage('newreleases',document.querySelectorAll('.nav-tab')[2])">New Releases</a></li>
+          <li><a onclick="showPage('artists',document.querySelectorAll('.nav-tab')[3])">Artists</a></li>
+          <li><a onclick="showPage('genres',document.querySelectorAll('.nav-tab')[4])">Genres</a></li>
+          <li><a onclick="filterByGenre('Zambian',null)">Zambian Music</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Library</div>
+        <ul>
+          <li><a onclick="showPage('liked',document.querySelectorAll('.nav-tab')[5])">Liked Songs</a></li>
+          <li><a onclick="showPage('downloads',document.querySelectorAll('.nav-tab')[6])">Downloads</a></li>
+          <li><a onclick="showPage('queue',document.querySelectorAll('.nav-tab')[7])">Play Queue</a></li>
+          <li><a onclick="openUpload()">Upload Music</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">About</div>
+        <ul>
+          <li><a href="#">About BA Control</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Made by Augustine</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 <span>BA Control</span>. All rights reserved. Made with ❤ in 🇿🇲 Zambia.</div>
+      <div class="footer-made">Designed & Built by <strong>Augustine</strong> — Free Music for All Zambians</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== PLAYER BAR ===== -->
+<div id="playerBar">
+  <div class="player-inner">
+    <div class="player-track">
+      <div class="player-cover" id="playerCover">🎵</div>
+      <div class="player-track-info">
+        <div class="player-title" id="playerTitle">Select a track</div>
+        <div class="player-artist" id="playerArtist">—</div>
+      </div>
+      <button class="player-heart" id="playerHeart" onclick="toggleLikeCurrent()">♡</button>
+    </div>
+
+    <div class="player-controls">
+      <div class="player-btns">
+        <button class="ctrl-btn" id="shuffleBtn" onclick="toggleShuffle()" title="Shuffle">⇄</button>
+        <button class="ctrl-btn" onclick="playPrev()" title="Previous">⏮</button>
+        <button class="play-pause-btn" id="playPauseBtn" onclick="togglePlay()">▶</button>
+        <button class="ctrl-btn" onclick="playNext()" title="Next">⏭</button>
+        <button class="ctrl-btn" id="repeatBtn" onclick="toggleRepeat()" title="Repeat">↺</button>
+      </div>
+      <div class="player-progress">
+        <span class="progress-time" id="currentTime">0:00</span>
+        <div class="progress-bar" id="progressBar" onclick="seekTrack(event)">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="progress-time" id="totalTime">0:00</span>
+      </div>
+    </div>
+
+    <div class="player-extra">
+      <div class="eq" id="eqAnim"><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div></div>
+      <div class="volume-wrap">
+        <span class="volume-icon">🔊</span>
+        <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="80" oninput="setVolume(this.value)">
+      </div>
+      <button class="dl-player-btn" onclick="downloadCurrentTrack()">⬇ Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== UPLOAD MODAL ===== -->
+<div class="modal-overlay" id="uploadModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeUpload()">✕</button>
+    <div class="modal-title">Upload Your Music</div>
+    <div class="modal-subtitle">Share your talent with all of Zambia — it's 100% free</div>
+
+    <div class="upload-zone" id="uploadZone" onclick="document.getElementById('audioFileInput').click()">
+      <input type="file" id="audioFileInput" accept="audio/*" onchange="handleAudioFile(event)">
+      <span class="upload-zone-icon" id="uploadZoneIcon">🎵</span>
+      <div class="upload-zone-text" id="uploadZoneText">Drop your audio file here or click to browse</div>
+      <div class="upload-zone-sub">MP3, WAV, FLAC, M4A • Max 50MB</div>
+    </div>
+
+    <div class="upload-progress" id="uploadProgress">
+      <div style="font-size:13px;color:var(--text2);margin-bottom:8px;" id="uploadProgressText">Processing…</div>
+      <div class="upload-progress-bar"><div class="upload-progress-fill" id="uploadProgressFill"></div></div>
+    </div>
+
+    <div class="form-row" style="margin-top:16px;">
+      <div class="form-group" style="grid-column:1/-1">
+        <label class="form-label">Song Title *</label>
+        <input type="text" class="form-input" id="songTitle" placeholder="Enter song title">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Artist Name *</label>
+        <input type="text" class="form-input" id="artistName" placeholder="Your artist name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Genre *</label>
+        <select class="form-select" id="songGenre">
+          <option value="">Select genre…</option>
+          <option>Zambian</option>
+          <option>Afrobeats</option>
+          <option>Gospel</option>
+          <option>Hip Hop</option>
+          <option>R&B</option>
+          <option>Dancehall</option>
+          <option>Amapiano</option>
+          <option>Kalindula</option>
+          <option>Pop</option>
+          <option>Traditional</option>
+          <option>Jazz</option>
+          <option>Electronic</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Album / Mixtape</label>
+        <input type="text" class="form-input" id="songAlbum" placeholder="Optional">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Year</label>
+        <input type="number" class="form-input" id="songYear" placeholder="2024" min="1990" max="2030">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Cover Art</label>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div class="cover-upload" id="coverUploadBtn" onclick="document.getElementById('coverFileInput').click()">
+          <input type="file" id="coverFileInput" accept="image/*" onchange="handleCoverFile(event)">
+          <span style="font-size:24px;">🖼</span>
+          <span class="cover-upload-label">Cover Art</span>
+        </div>
+        <div style="font-size:13px;color:var(--text3);line-height:1.6;">
+          Upload a cover image for your song.<br>
+          Recommended: 500×500px or larger.<br>
+          JPG, PNG, WEBP supported.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Description / Lyrics (optional)</label>
+      <textarea class="form-input" id="songDesc" placeholder="Write something about this song…" rows="3" style="resize:vertical;"></textarea>
+    </div>
+    <button class="upload-submit" onclick="submitUpload()">🚀 Upload to BA Control</button>
+  </div>
+</div>
+
+<!-- AUDIO ELEMENT -->
+<audio id="audioElement"></audio>
+
+<script>
+// ===================================================
+// DATA STORE (localStorage)
+// ===================================================
+const STORE_KEY = 'ba_control_songs';
+const LIKED_KEY = 'ba_control_liked';
+const DL_KEY = 'ba_control_downloads';
+const QUEUE_KEY = 'ba_control_queue';
+
+function getSongs(){
+  try{ return JSON.parse(localStorage.getItem(STORE_KEY)||'[]'); }catch(e){ return []; }
+}
+function saveSongs(arr){ localStorage.setItem(STORE_KEY,JSON.stringify(arr)); }
+function getLiked(){ try{ return JSON.parse(localStorage.getItem(LIKED_KEY)||'[]'); }catch(e){ return []; } }
+function saveLiked(arr){ localStorage.setItem(LIKED_KEY,JSON.stringify(arr)); }
+function getDownloads(){ try{ return JSON.parse(localStorage.getItem(DL_KEY)||'[]'); }catch(e){ return []; } }
+function saveDownloads(arr){ localStorage.setItem(DL_KEY,JSON.stringify(arr)); }
+function getQueue(){ try{ return JSON.parse(localStorage.getItem(QUEUE_KEY)||'[]'); }catch(e){ return []; } }
+function saveQueue(arr){ localStorage.setItem(QUEUE_KEY,JSON.stringify(arr)); }
+
+// ===================================================
+// SEED DATA (demo songs for fresh load)
+// ===================================================
+function seedDemoSongs(){
+  const demos = [
+    {id:'d1',title:'Wena Nali',artist:'Yo Maps',genre:'Zambian',album:'',year:'2023',cover:'',audioData:'',plays:12450,uploadDate:Date.now()-86400000*2,isDemo:true},
+    {id:'d2',title:'Forever',artist:'Pompi',genre:'Gospel',album:'Transition',year:'2023',cover:'',audioData:'',plays:9820,uploadDate:Date.now()-86400000*3,isDemo:true},
+    {id:'d3',title:'Ndifye Nawe',artist:'Macky 2',genre:'Hip Hop',album:'Criminalz',year:'2022',cover:'',audioData:'',plays:18700,uploadDate:Date.now()-86400000*5,isDemo:true},
+    {id:'d4',title:'Zed Anthem',artist:'Chile One MrZambia',genre:'Zambian',album:'',year:'2023',cover:'',audioData:'',plays:22300,uploadDate:Date.now()-86400000*1,isDemo:true},
+    {id:'d5',title:'Beautiful',artist:'Cleo Ice Queen',genre:'Hip Hop',album:'',year:'2022',cover:'',audioData:'',plays:7640,uploadDate:Date.now()-86400000*10,isDemo:true},
+    {id:'d6',title:'Tiye',artist:'K\'Millian',genre:'R&B',album:'',year:'2023',cover:'',audioData:'',plays:5300,uploadDate:Date.now()-86400000*7,isDemo:true},
+    {id:'d7',title:'Ngwashi',artist:'Slapdee',genre:'Hip Hop',album:'The Saga',year:'2021',cover:'',audioData:'',plays:31200,uploadDate:Date.now()-86400000*20,isDemo:true},
+    {id:'d8',title:'Praise',artist:'Kings Malembe Malembe',genre:'Gospel',album:'',year:'2023',cover:'',audioData:'',plays:8900,uploadDate:Date.now()-86400000*4,isDemo:true},
+    {id:'d9',title:'Ndiwe',artist:'Roberto',genre:'Zambian',album:'',year:'2022',cover:'',audioData:'',plays:14500,uploadDate:Date.now()-86400000*8,isDemo:true},
+    {id:'d10',title:'Dance Amapiano',artist:'Afunika',genre:'Amapiano',album:'',year:'2023',cover:'',audioData:'',plays:19800,uploadDate:Date.now()-86400000*6,isDemo:true},
+    {id:'d11',title:'Tata Wandi',artist:'JK',genre:'Kalindula',album:'',year:'2020',cover:'',audioData:'',plays:6700,uploadDate:Date.now()-86400000*30,isDemo:true},
+    {id:'d12',title:'Zed Love',artist:'Abel Chungu',genre:'Gospel',album:'',year:'2022',cover:'',audioData:'',plays:11100,uploadDate:Date.now()-86400000*15,isDemo:true},
+  ];
+  saveSongs(demos);
+}
+
+// ===================================================
+// PLAYER STATE
+// ===================================================
+let currentQueue = [];
+let currentIndex = -1;
+let isPlaying = false;
+let isShuffle = false;
+let repeatMode = 0; // 0=off,1=all,2=one
+let audioEl = document.getElementById('audioElement');
+let currentSongId = null;
+let activeGenreFilter = 'All';
+
+// ===================================================
+// EMOJI / COLOR for cards
+// ===================================================
+const genreEmojis = {
+  'Zambian':'🇿🇲','Gospel':'✝','Hip Hop':'🎤','R&B':'💜',
+  'Dancehall':'🔥','Amapiano':'🎹','Kalindula':'🥁',
+  'Pop':'🎶','Traditional':'🏛','Afrobeats':'🌍','Jazz':'🎷',
+  'Electronic':'⚡','Other':'🎵',''  :'🎵'
+};
+const genreColors = {
+  'Zambian':'#198038','Gospel':'#8e44ad','Hip Hop':'#e74c3c',
+  'R&B':'#9b59b6','Dancehall':'#f39c12','Amapiano':'#1abc9c',
+  'Kalindula':'#e67e22','Pop':'#3498db','Traditional':'#795548',
+  'Afrobeats':'#ff6b35','Jazz':'#607d8b','Electronic':'#00bcd4','Other':'#198038'
+};
+
+function coverBg(song){
+  const c = genreColors[song.genre]||'#198038';
+  return `background:linear-gradient(135deg,${c}33,#0a1a0d);`;
+}
+
+// ===================================================
+// RENDER: MUSIC CARD
+// ===================================================
+function renderCard(song){
+  const emoji = genreEmojis[song.genre]||'🎵';
+  const isNew = (Date.now()-song.uploadDate) < 86400000*7;
+  const isHot = song.plays > 15000;
+  const liked = getLiked().includes(song.id);
+  return `
+  <div class="music-card" id="card-${song.id}">
+    <div class="cover-placeholder" style="${coverBg(song)}">
+      ${song.cover ? `<img src="${song.cover}" alt="${song.title}">` : `<span style="font-size:52px;position:relative;z-index:1;">${emoji}</span>`}
+      <div class="music-card-overlay">
+        <button class="play-btn-overlay" onclick="playSongById('${song.id}',event)">▶</button>
+        <button class="dl-btn-overlay" onclick="downloadSong('${song.id}',event)" title="Download">⬇</button>
+      </div>
+      ${isHot?`<div class="music-card-hot">🔥 Hot</div>`:isNew?`<div class="music-card-new">New</div>`:''}
+    </div>
+    <div class="music-card-info">
+      <div class="music-card-title">${song.title}</div>
+      <div class="music-card-artist">${song.artist}</div>
+      <div class="music-card-meta">
+        <span class="music-card-genre">${song.genre||'Music'}</span>
+        <span class="music-card-plays">▶ ${fmtPlays(song.plays)}</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ===================================================
+// RENDER: TRACK ROW
+// ===================================================
+function renderTrackRow(song, idx, listId){
+  const emoji = genreEmojis[song.genre]||'🎵';
+  const liked = getLiked().includes(song.id);
+  return `
+  <div class="track-item ${currentSongId===song.id?'playing':''}" id="track-${song.id}">
+    <div class="track-num">${idx+1}</div>
+    <div class="track-cover-sm" style="${coverBg(song)}">
+      ${song.cover?`<img src="${song.cover}" alt="">`:emoji}
+    </div>
+    <div class="track-info">
+      <div class="track-title">${song.title}</div>
+      <div class="track-artist">${song.artist} ${song.album?'• '+song.album:''}</div>
+    </div>
+    <div class="track-genre">${song.genre}</div>
+    <div class="track-duration">${song.duration?fmtTime(song.duration):'—'}</div>
+    <div class="track-actions">
+      <button class="track-action-btn ${liked?'liked-btn':''}" onclick="toggleLike('${song.id}',this)" title="Like">${liked?'❤':'♡'}</button>
+      <button class="track-action-btn" onclick="addToQueue('${song.id}')" title="Add to Queue">+</button>
+      <button class="track-action-btn" onclick="downloadSong('${song.id}',event)" title="Download">⬇</button>
+    </div>
+    <button class="track-play-btn" onclick="playSongById('${song.id}',event)">▶</button>
+  </div>`;
+}
+
+// ===================================================
+// RENDER: ARTIST CARD
+// ===================================================
+function renderArtistCard(artistName, count){
+  const emoji = ['🎤','🎸','🎹','🎷','🥁','🎺','🎻','🪗'][Math.floor(Math.random()*8)];
+  return `
+  <div class="artist-card" onclick="showArtistTracks('${artistName.replace(/'/g,"\\'")}')">
+    <div class="artist-avatar">${emoji}</div>
+    <div class="artist-name">${artistName}</div>
+    <div class="artist-count">${count} track${count!==1?'s':''}</div>
+  </div>`;
+}
+
+// ===================================================
+// PAGE MANAGER
+// ===================================================
+function showPage(page, tabEl){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  const el = document.getElementById('page-'+page);
+  if(el) el.classList.add('active');
+  if(tabEl) tabEl.classList.add('active');
+  renderPage(page);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderPage(page){
+  const songs = getSongs();
+  switch(page){
+    case 'home': renderHome(songs); break;
+    case 'trending': renderTrending(songs); break;
+    case 'newreleases': renderNewReleases(songs); break;
+    case 'artists': renderArtists(songs); break;
+    case 'genres': renderGenres(songs); break;
+    case 'liked': renderLiked(songs); break;
+    case 'downloads': renderDownloads(); break;
+    case 'queue': renderQueuePage(); break;
+  }
+}
+
+// ===================================================
+// RENDER PAGES
+// ===================================================
+function renderHome(songs){
+  // Stats
+  const artists = [...new Set(songs.map(s=>s.artist))];
+  animateCount('statSongs', songs.length);
+  animateCount('statArtists', artists.length);
+
+  // Featured grid (filtered)
+  let filtered = activeGenreFilter==='All' ? songs : songs.filter(s=>s.genre===activeGenreFilter);
+  const featured = filtered.sort((a,b)=>b.plays-a.plays).slice(0,8);
+  document.getElementById('featuredGrid').innerHTML = featured.length
+    ? featured.map(renderCard).join('')
+    : '<p class="empty-state"><span class="empty-icon">🎵</span><p>No songs yet. Upload the first one!</p></p>';
+
+  // Top tracks list
+  const top = [...songs].sort((a,b)=>b.plays-a.plays).slice(0,10);
+  document.getElementById('topTracksList').innerHTML = top.length
+    ? top.map((s,i)=>renderTrackRow(s,i,'topTracksList')).join('')
+    : '<div class="empty-state"><span class="empty-icon">🎵</span><p>No songs yet. Upload to get started!</p></div>';
+
+  // Artists
+  const artistMap = {};
+  songs.forEach(s=>{ artistMap[s.artist]=(artistMap[s.artist]||0)+1; });
+  const topArtists = Object.entries(artistMap).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  document.getElementById('artistsGrid').innerHTML = topArtists.length
+    ? topArtists.map(([n,c])=>renderArtistCard(n,c)).join('')
+    : '<div class="empty-state"><span class="empty-icon">🎤</span><p>No artists yet.</p></div>';
+}
+
+function renderTrending(songs){
+  const sorted = [...songs].sort((a,b)=>b.plays-a.plays);
+  document.getElementById('trendingList').innerHTML = sorted.length
+    ? sorted.map((s,i)=>renderTrackRow(s,i,'trendingList')).join('')
+    : '<div class="empty-state"><span class="empty-icon">🔥</span><p>No songs yet. Upload to get started!</p></div>';
+}
+
+function renderNewReleases(songs){
+  const sorted = [...songs].sort((a,b)=>b.uploadDate-a.uploadDate);
+  document.getElementById('newReleasesGrid').innerHTML = sorted.length
+    ? sorted.map(renderCard).join('')
+    : '<div class="empty-state"><span class="empty-icon">✨</span><p>No songs yet.</p></div>';
+}
+
+function renderArtists(songs){
+  const artistMap = {};
+  songs.forEach(s=>{ artistMap[s.artist]=(artistMap[s.artist]||0)+1; });
+  const sorted = Object.entries(artistMap).sort((a,b)=>b[1]-a[1]);
+  document.getElementById('allArtistsGrid').innerHTML = sorted.length
+    ? sorted.map(([n,c])=>renderArtistCard(n,c)).join('')
+    : '<div class="empty-state"><span class="empty-icon">🎤</span><p>No artists yet.</p></div>';
+}
+
+function showArtistTracks(artist){
+  const songs = getSongs().filter(s=>s.artist===artist);
+  const sec = document.getElementById('artistTracksSection');
+  document.getElementById('artistTracksTitle').innerHTML = `<div class="section-dot"></div>🎤 <span>${artist}</span>`;
+  document.getElementById('artistTracksList').innerHTML = songs.map((s,i)=>renderTrackRow(s,i,'artistTracksList')).join('');
+  sec.style.display='block';
+  sec.scrollIntoView({behavior:'smooth'});
+}
+
+function renderGenres(songs){
+  const genreMap = {};
+  songs.forEach(s=>{ if(!genreMap[s.genre])genreMap[s.genre]=[]; genreMap[s.genre].push(s); });
+  const container = document.getElementById('genresContent');
+  if(!Object.keys(genreMap).length){
+    container.innerHTML='<div class="empty-state"><span class="empty-icon">🎵</span><p>No songs yet.</p></div>'; return;
+  }
+  container.innerHTML = Object.entries(genreMap).map(([genre,list])=>`
+    <div style="margin-bottom:32px;">
+      <div class="section-header">
+        <div class="section-title"><div class="section-dot"></div>${genreEmojis[genre]||'🎵'} <span>${genre}</span></div>
+        <span style="font-size:12px;color:var(--text3);font-family:'Rajdhani',sans-serif;">${list.length} tracks</span>
+      </div>
+      <div class="music-grid">${list.slice(0,4).map(renderCard).join('')}</div>
+    </div>
+  `).join('');
+}
+
+function renderLiked(songs){
+  const liked = getLiked();
+  const likedSongs = songs.filter(s=>liked.includes(s.id));
+  document.getElementById('likedList').innerHTML = likedSongs.length
+    ? likedSongs.map((s,i)=>renderTrackRow(s,i,'likedList')).join('')
+    : '<div class="empty-state"><span class="empty-icon">❤</span><p>No liked songs yet. Tap ♡ on any song to like it!</p></div>';
+}
+
+function renderDownloads(){
+  const dls = getDownloads();
+  const songs = getSongs();
+  const dlSongs = songs.filter(s=>dls.includes(s.id));
+  document.getElementById('downloadsList').innerHTML = dlSongs.length
+    ? dlSongs.map((s,i)=>renderTrackRow(s,i,'downloadsList')).join('')
+    : '<div class="empty-state"><span class="empty-icon">⬇</span><p>No downloads yet. Tap ⬇ on any song to download it!</p></div>';
+}
+
+function renderQueuePage(){
+  const q = getQueue();
+  const songs = getSongs();
+  const qSongs = q.map(id=>songs.find(s=>s.id===id)).filter(Boolean);
+  document.getElementById('queueList').innerHTML = qSongs.length
+    ? qSongs.map((s,i)=>renderTrackRow(s,i,'queueList')).join('')
+    : '<div class="empty-state"><span class="empty-icon">📋</span><p>Queue is empty. Add songs with the + button!</p></div>';
+}
+
+// ===================================================
+// GENRE FILTER
+// ===================================================
+function filterByGenre(genre, btn){
+  activeGenreFilter = genre;
+  document.querySelectorAll('.genre-pill').forEach(p=>p.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  renderHome(getSongs());
+}
+
+// ===================================================
+// SEARCH
+// ===================================================
+function handleSearch(query){
+  if(!query.trim()){renderHome(getSongs());return;}
+  const q = query.toLowerCase();
+  const songs = getSongs().filter(s=>
+    s.title.toLowerCase().includes(q)||
+    s.artist.toLowerCase().includes(q)||
+    (s.genre||'').toLowerCase().includes(q)||
+    (s.album||'').toLowerCase().includes(q)
+  );
+  // Show results on home featured
+  const fg = document.getElementById('featuredGrid');
+  if(fg){
+    fg.innerHTML = songs.length
+      ? songs.map(renderCard).join('')
+      : `<div class="empty-state"><span class="empty-icon">🔍</span><p>No results for "${query}"</p></div>`;
+  }
+  // Activate home
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-home').classList.add('active');
+}
+
+// ===================================================
+// PLAYBACK
+// ===================================================
+function playSongById(id, e){
+  if(e){e.stopPropagation();}
+  const songs = getSongs();
+  const idx = songs.findIndex(s=>s.id===id);
+  if(idx===-1){showToast('error','Song not found.');return;}
+  currentQueue = songs.map(s=>s.id);
+  currentIndex = idx;
+  loadAndPlay(songs[idx]);
+}
+
+function loadAndPlay(song){
+  if(!song.audioData && song.isDemo){
+    showToast('error','Demo song — upload your own MP3 to play music!');
+    updatePlayerUI(song, false);
+    document.getElementById('playerBar').classList.add('visible');
+    return;
+  }
+  if(!song.audioData){
+    showToast('error','No audio data for this song.');
+    return;
+  }
+  currentSongId = song.id;
+  audioEl.src = song.audioData;
+  audioEl.volume = document.getElementById('volumeSlider').value/100;
+  audioEl.play().then(()=>{
+    isPlaying=true;
+    updatePlayerUI(song, true);
+    updatePlayButtons();
+    // bump plays
+    bumpPlays(song.id);
+  }).catch(()=>{
+    showToast('error','Playback failed. Try a different browser.');
+  });
+  document.getElementById('playerBar').classList.add('visible');
+  updatePlayerUI(song, true);
+  // Mark playing row
+  document.querySelectorAll('.track-item').forEach(el=>{
+    el.classList.toggle('playing', el.id==='track-'+song.id);
+  });
+}
+
+function bumpPlays(id){
+  const songs = getSongs();
+  const s = songs.find(x=>x.id===id);
+  if(s){s.plays=(s.plays||0)+1; saveSongs(songs);}
+}
+
+function updatePlayerUI(song, playing){
+  document.getElementById('playerTitle').textContent = song.title;
+  document.getElementById('playerArtist').textContent = song.artist + (song.genre?' • '+song.genre:'');
+  const cover = document.getElementById('playerCover');
+  if(song.cover){
+    cover.innerHTML=`<img src="${song.cover}" alt="">`;
+  } else {
+    cover.innerHTML = genreEmojis[song.genre]||'🎵';
+  }
+  const liked = getLiked().includes(song.id);
+  document.getElementById('playerHeart').textContent = liked?'❤':'♡';
+  document.getElementById('playerHeart').classList.toggle('liked',liked);
+  document.getElementById('eqAnim').classList.toggle('paused',!playing);
+}
+
+function togglePlay(){
+  if(!currentSongId){showToast('error','Select a song first!');return;}
+  const song = getSongs().find(s=>s.id===currentSongId);
+  if(!song||!song.audioData){
+    showToast('error','Demo song — upload an MP3 to play!');return;
+  }
+  if(isPlaying){ audioEl.pause(); isPlaying=false; }
+  else { audioEl.play(); isPlaying=true; }
+  updatePlayButtons();
+  document.getElementById('eqAnim').classList.toggle('paused',!isPlaying);
+}
+
+function updatePlayButtons(){
+  document.getElementById('playPauseBtn').textContent = isPlaying ? '⏸' : '▶';
+}
+
+function playNext(){
+  if(!currentQueue.length)return;
+  if(isShuffle){ currentIndex=Math.floor(Math.random()*currentQueue.length); }
+  else { currentIndex=(currentIndex+1)%currentQueue.length; }
+  const song = getSongs().find(s=>s.id===currentQueue[currentIndex]);
+  if(song) loadAndPlay(song);
+}
+
+function playPrev(){
+  if(!currentQueue.length)return;
+  if(audioEl.currentTime>3){ audioEl.currentTime=0; return; }
+  currentIndex=(currentIndex-1+currentQueue.length)%currentQueue.length;
+  const song = getSongs().find(s=>s.id===currentQueue[currentIndex]);
+  if(song) loadAndPlay(song);
+}
+
+function toggleShuffle(){
+  isShuffle=!isShuffle;
+  document.getElementById('shuffleBtn').classList.toggle('active',isShuffle);
+  showToast('success', isShuffle?'Shuffle ON':'Shuffle OFF');
+}
+
+function toggleRepeat(){
+  repeatMode=(repeatMode+1)%3;
+  const btn = document.getElementById('repeatBtn');
+  btn.classList.toggle('active',repeatMode>0);
+  btn.textContent = repeatMode===2?'↺¹':'↺';
+  showToast('success',['Repeat OFF','Repeat ALL','Repeat ONE'][repeatMode]);
+}
+
+audioEl.addEventListener('timeupdate',()=>{
+  if(!audioEl.duration) return;
+  const pct = (audioEl.currentTime/audioEl.duration)*100;
+  document.getElementById('progressFill').style.width = pct+'%';
+  document.getElementById('currentTime').textContent = fmtTime(audioEl.currentTime);
+  document.getElementById('totalTime').textContent = fmtTime(audioEl.duration);
+});
+
+audioEl.addEventListener('ended',()=>{
+  if(repeatMode===2){ audioEl.currentTime=0; audioEl.play(); }
+  else { playNext(); }
+});
+
+audioEl.addEventListener('play',()=>{ isPlaying=true; updatePlayButtons(); document.getElementById('eqAnim').classList.remove('paused'); });
+audioEl.addEventListener('pause',()=>{ isPlaying=false; updatePlayButtons(); document.getElementById('eqAnim').classList.add('paused'); });
+
+function seekTrack(e){
+  if(!audioEl.duration)return;
+  const bar = document.getElementById('progressBar');
+  const rect = bar.getBoundingClientRect();
+  const pct = (e.clientX-rect.left)/rect.width;
+  audioEl.currentTime = pct*audioEl.duration;
+}
+
+function setVolume(v){
+  audioEl.volume = v/100;
+}
+
+// ===================================================
+// LIKE / UNLIKE
+// ===================================================
+function toggleLike(id, btn){
+  let liked = getLiked();
+  if(liked.includes(id)){
+    liked = liked.filter(x=>x!==id);
+    btn.textContent='♡';btn.classList.remove('liked-btn');
+    showToast('success','Removed from liked songs');
+  } else {
+    liked.push(id);
+    btn.textContent='❤';btn.classList.add('liked-btn');
+    showToast('success','Added to liked songs ❤');
+  }
+  saveLiked(liked);
+  if(currentSongId===id){
+    document.getElementById('playerHeart').textContent = liked.includes(id)?'❤':'♡';
+    document.getElementById('playerHeart').classList.toggle('liked',liked.includes(id));
+  }
+}
+
+function toggleLikeCurrent(){
+  if(!currentSongId)return;
+  const btn = document.getElementById('playerHeart');
+  const liked = getLiked();
+  if(liked.includes(currentSongId)){
+    saveLiked(liked.filter(x=>x!==currentSongId));
+    btn.textContent='♡';btn.classList.remove('liked');
+    showToast('success','Removed from liked songs');
+  } else {
+    liked.push(currentSongId);
+    saveLiked(liked);
+    btn.textContent='❤';btn.classList.add('liked');
+    showToast('success','Added to liked songs ❤');
+  }
+}
+
+// ===================================================
+// DOWNLOAD
+// ===================================================
+function downloadSong(id, e){
+  if(e) e.stopPropagation();
+  const song = getSongs().find(s=>s.id===id);
+  if(!song){showToast('error','Song not found.');return;}
+  if(!song.audioData){
+    showToast('error','Demo song — upload your own MP3 to download!');return;
+  }
+  const a = document.createElement('a');
+  a.href = song.audioData;
+  a.download = `${song.artist} - ${song.title}.mp3`;
+  a.click();
+  // Track download
+  const dls = getDownloads();
+  if(!dls.includes(id)){ dls.push(id); saveDownloads(dls); }
+  showToast('success','Download started! ⬇');
+}
+
+function downloadCurrentTrack(){
+  if(!currentSongId){showToast('error','No track playing.');return;}
+  downloadSong(currentSongId, null);
+}
+
+function clearDownloads(){
+  saveDownloads([]);
+  renderDownloads();
+  showToast('success','Downloads cleared.');
+}
+
+// ===================================================
+// QUEUE
+// ===================================================
+function addToQueue(id){
+  const q = getQueue();
+  if(!q.includes(id)){ q.push(id); saveQueue(q); showToast('success','Added to queue!'); }
+  else { showToast('error','Already in queue.'); }
+}
+
+function clearQueue(){
+  saveQueue([]);
+  renderQueuePage();
+  showToast('success','Queue cleared.');
+}
+
+// ===================================================
+// UPLOAD
+// ===================================================
+let pendingAudio = null;
+let pendingCover = null;
+
+function openUpload(){ document.getElementById('uploadModal').classList.add('open'); }
+function closeUpload(){ document.getElementById('uploadModal').classList.remove('open'); }
+document.getElementById('uploadModal').addEventListener('click',function(e){ if(e.target===this) closeUpload(); });
+
+// Drag and drop
+const uploadZone = document.getElementById('uploadZone');
+uploadZone.addEventListener('dragover',e=>{e.preventDefault();uploadZone.classList.add('dragover');});
+uploadZone.addEventListener('dragleave',()=>uploadZone.classList.remove('dragover'));
+uploadZone.addEventListener('drop',e=>{
+  e.preventDefault();uploadZone.classList.remove('dragover');
+  const file = e.dataTransfer.files[0];
+  if(file && file.type.startsWith('audio/')) processAudioFile(file);
+  else showToast('error','Please drop an audio file.');
+});
+
+function handleAudioFile(e){ const file=e.target.files[0]; if(file) processAudioFile(file); }
+function handleCoverFile(e){
+  const file=e.target.files[0];
+  if(!file)return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    pendingCover=ev.target.result;
+    const btn=document.getElementById('coverUploadBtn');
+    btn.innerHTML=`<img src="${pendingCover}" alt="Cover">`;
+  };
+  reader.readAsDataURL(file);
+}
+
+function processAudioFile(file){
+  const prog = document.getElementById('uploadProgress');
+  const progFill = document.getElementById('uploadProgressFill');
+  const progText = document.getElementById('uploadProgressText');
+  prog.classList.add('active');
+  progText.textContent = 'Reading audio file…';
+  progFill.style.width='0%';
+
+  const reader = new FileReader();
+  reader.onprogress = ev=>{ if(ev.lengthComputable) progFill.style.width=(ev.loaded/ev.total*60)+'%'; };
+  reader.onload = ev=>{
+    pendingAudio = ev.target.result;
+    progFill.style.width='80%';
+    progText.textContent = 'Getting duration…';
+    // Get duration
+    const tmpAudio = new Audio(pendingAudio);
+    tmpAudio.onloadedmetadata=()=>{
+      progFill.style.width='100%';
+      progText.textContent='✓ Audio ready! Fill in the details below.';
+      // Auto-fill title from filename
+      const name = file.name.replace(/\.[^.]+$/,'');
+      if(!document.getElementById('songTitle').value) document.getElementById('songTitle').value=name;
+      document.getElementById('uploadZoneIcon').textContent='✅';
+      document.getElementById('uploadZoneText').textContent=file.name+' ('+fmtTime(tmpAudio.duration)+')';
+      pendingAudio._duration = tmpAudio.duration;
+    };
+    tmpAudio.onerror=()=>{ progFill.style.width='100%'; progText.textContent='✓ File loaded.'; };
+  };
+  reader.readAsDataURL(file);
+}
+
+function submitUpload(){
+  const title = document.getElementById('songTitle').value.trim();
+  const artist = document.getElementById('artistName').value.trim();
+  const genre = document.getElementById('songGenre').value;
+  const album = document.getElementById('songAlbum').value.trim();
+  const year = document.getElementById('songYear').value;
+  const desc = document.getElementById('songDesc').value.trim();
+
+  if(!title){showToast('error','Please enter a song title.');return;}
+  if(!artist){showToast('error','Please enter an artist name.');return;}
+  if(!genre){showToast('error','Please select a genre.');return;}
+  if(!pendingAudio){showToast('error','Please upload an audio file first!');return;}
+
+  const song = {
+    id: 'u'+Date.now(),
+    title, artist, genre, album, year,
+    description: desc,
+    cover: pendingCover||'',
+    audioData: pendingAudio,
+    duration: pendingAudio._duration||0,
+    plays: 0,
+    uploadDate: Date.now(),
+    isDemo: false,
+  };
+  const songs = getSongs();
+  songs.unshift(song);
+  saveSongs(songs);
+
+  showToast('success','🎉🎊 "'+title+'" uploaded successfully!');
+  closeUpload();
+  resetUploadForm();
+  renderHome(getSongs());
+}
+
+function resetUploadForm(){
+  document.getElementById('songTitle').value='';
+  document.getElementById('artistName').value='';
+  document.getElementById('songGenre').value='';
+  document.getElementById('songAlbum').value='';
+  document.getElementById('songYear').value='';
+  document.getElementById('songDesc').value='';
+  document.getElementById('uploadZoneIcon').textContent='🎵';
+  document.getElementById('uploadZoneText').textContent='Drop your audio file here or click to browse';
+  document.getElementById('coverUploadBtn').innerHTML=`<input type="file" id="coverFileInput" accept="image/*" onchange="handleCoverFile(event)"><span style="font-size:24px;">🖼</span><span class="cover-upload-label">Cover Art</span>`;
+  document.getElementById('audioFileInput').value='';
+  document.getElementById('uploadProgress').classList.remove('active');
+  pendingAudio=null; pendingCover=null;
+}
+
+// ===================================================
+// TOAST
+// ===================================================
+function showToast(type, msg){
+  const icons = {success:'✅',error:'❌',info:'ℹ'};
+  const toast = document.createElement('div');
+  toast.className=`toast ${type}`;
+  toast.innerHTML=`<span class="toast-icon">${icons[type]||'ℹ'}</span><span>${msg}</span>`;
+  document.getElementById('toastContainer').appendChild(toast);
+  setTimeout(()=>toast.remove(), 3500);
+}
+
+// ===================================================
+// UTILS
+// ===================================================
+function fmtTime(s){
+  if(!s||isNaN(s)) return '0:00';
+  const m=Math.floor(s/60),sec=Math.floor(s%60);
+  return m+':'+(sec<10?'0':'')+sec;
+}
+function fmtPlays(n){
+  if(!n)return '0';
+  if(n>=1000000)return (n/1000000).toFixed(1)+'M';
+  if(n>=1000)return (n/1000).toFixed(1)+'K';
+  return n.toString();
+}
+function animateCount(id, target){
+  const el = document.getElementById(id);
+  if(!el)return;
+  let cur=0;const step=Math.max(1,Math.floor(target/30));
+  const t=setInterval(()=>{ cur=Math.min(cur+step,target); el.textContent=cur; if(cur>=target)clearInterval(t); },30);
+}
+
+// ===================================================
+// INIT
+// ===================================================
+(function init(){
+  const songs = getSongs();
+  if(!songs.length) seedDemoSongs();
+  renderHome(getSongs());
+})();
+</script>
+</body>
+</html>
